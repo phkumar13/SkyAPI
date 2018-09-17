@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Check";
+}
+
+<h1>SKY</h1>
+<p class="lead">Check Movie Parental Control Level</p>
+
+<hr />
+
+<form asp-action="Check" method="post">
+    <div class="row" style="padding-left:30px;">
+        <div class="col-6">
+            <div class="form-group row">
+                <div class="col-5">
+                    <label class="custom-label">Expected Parental Control Level</label>
+                </div>
+                <div class="col-7">
+                    <select name="parentControlLevel" class="form-control">
+                        <option value="U">U</option>
+                        <option value="PG">PG</option>
+                        <option value="12">12</option>
+                        <option value="15">15</option>
+                        <option value="18">18</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-5">
+                    <label class="custom-label">Movie Id</label>
+                </div>
+                <div class="col-7">
+                    <input type="text" name="movieId" class="form-control" placeholder="Movie Id.." />
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row" style="padding-left:15px;">
+        <div class="col-6">
+            <input type="submit" class="btn btn-primary btn-lg" value="Check" />
+        </div>
+    </div>
+</form>
